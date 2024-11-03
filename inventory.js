@@ -135,7 +135,7 @@ document.getElementById('inventory-form').addEventListener('submit', async funct
 // Event listener for supplier form submission
 document.getElementById('supplier-form').addEventListener('submit', async function (event) {
     event.preventDefault();
-    const supplierName = document.getElementById('supplier-name').value;
+    const supplierName =prompt("Enter the supplier name");
 
     if (supplierName) {
         suppliers.push(supplierName);
