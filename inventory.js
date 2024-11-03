@@ -16,7 +16,7 @@ async function renderInventory() {
     const inventoryList = document.getElementById('inventory-list');
     inventoryList.innerHTML = ''; // Clear the list before rendering
 
-    const snapshot = await db.collection('inventory').get();
+    const snapshot = await db.collection(`company/${sessionStorage.getItem("username")}/inventory`).get();
     snapshot.forEach(doc => {
         const item = doc.data();
         const card = document.createElement('div');
@@ -77,13 +77,12 @@ function renderSuppliers() {
     });
 }
 
-// Function to remove a supplier
+ 
 function removeSupplier(index) {
     suppliers.splice(index, 1);
     renderSuppliers();
 }
-
-// Event listener for inventory form submission
+ 
 document.getElementById('inventory-form').addEventListener('submit', async function (event) {
     event.preventDefault();
     const itemName = document.getElementById('item-name').value;
@@ -92,11 +91,11 @@ document.getElementById('inventory-form').addEventListener('submit', async funct
 
     if (itemName && itemQuantity && itemSupplier) {
         try {
-            // Check if the item already exists in Firestore
-            const existingItemSnapshot = await db.collection('inventory').where('name', '==', itemName).get();
+            
+            const existingItemSnapshot = await db.collection(`company/${sessionStorage.getItem("username")}/inventory`).where('name', '==', itemName).get();
 
             if (!existingItemSnapshot.empty) {
-                // Item already exists; update its quantity
+               
                 existingItemSnapshot.forEach(async (doc) => {
                     const existingItem = doc.data();
                     const newQuantity = existingItem.quantity;
@@ -111,7 +110,7 @@ document.getElementById('inventory-form').addEventListener('submit', async funct
                 });
             } else {
                 // First time adding the item; set total resources equal to quantity
-                await db.collection('inventory').add({
+                await db.collection(`company/${sessionStorage.getItem("username")}/inventory`).add({
                     name: itemName,
                     quantity: 0,
                     supplier: itemSupplier,
@@ -145,7 +144,7 @@ document.getElementById('supplier-form').addEventListener('submit', async functi
     }
 });
 
-// Function to populate the supplier select element
+ 
 function populateSupplierOptions() {
     const supplierSelect = document.getElementById('item-supplier');
     supplierSelect.innerHTML = '<option value="" disabled selected>Select Supplier</option>'; // Reset options
@@ -158,12 +157,12 @@ function populateSupplierOptions() {
     });
 }
 
-// Call the function to populate the options when the page loads
+ 
 window.onload = async function() {
     if(sessionStorage.getItem("username"))
     {
 
-        const snapshot = await db.collection('suppliers').get();
+        const snapshot = await db.collection(`company/${sessionStorage.getItem("username")}/suppliers`).get();
         snapshot.forEach(doc => {
             suppliers.push(doc.data().name);
         });
