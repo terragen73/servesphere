@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0; /* Light background for better contrast */
+}
+
+.container {
+    max-width: 600px; /* Limit the container width */
+    margin: 0 auto;   /* Center the container */
+    padding: 20px;    /* Padding around the container */
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header {
+    text-align: center; /* Center the header text */
+}
+
+.test {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; 
+}
+
+.remove-option-button{
+    background-color: #d9d9d9; 
+    border: none;               
+    color: #030233;                
+    padding: 4px 8px;          
+    border-radius: 4px;        
+    cursor: pointer;            
+    font-size: 12px;
+}
+.remove-option-button{
+    background-color:#030233 ;    /* Darker gray on hover */
+    color: white;
+}
+.description {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+#question-container {
+    margin-bottom: 20px; 
+}
+
+.question {
+    border: 1px solid #ccc;  
+    border-radius: 5px;      
+    padding: 15px;           
+    margin-bottom: 15px;     
+    background-color: #f9f9f9; 
+}
+
+.question-input {
+    width: 95%;            
+    padding: 10px;          
+    margin-bottom: 10px;    
+    border: 1px solid #ccc; 
+    border-radius: 4px;     
+}
+
+.options-container {
+    margin-top: 10px;       
+}
+
+.option-group {
+    display: flex;           
+    align-items: center;     
+    border: 1px solid #ccc; 
+    border-radius: 5px;    
+    padding: 10px;          
+    margin-bottom: 4px;     
+    background-color: #f1f1f1; 
+}
+
+.option-group input[type="text"] {
+    flex: 1;                 
+    margin-right: 8px;     
+    padding: 5px;           
+    border: 1px solid #ccc; 
+    border-radius: 4px;     
+}
+
+.add-option-button {
+    background-color:#030233 ; 
+    border: none;               
+    color: #d9d9d9;                
+    padding: 4px 8px;          
+    border-radius: 4px;        
+    cursor: pointer;            
+    font-size: 12px;           
+}
+
+.add-option-button:hover {
+    background-color:#030233 ;    /* Darker gray on hover */
+    color: white;
+}
+
+.add-question-button {
+    background-color:#1869b4; /* Blue background for add question button */
+    border: none;               /* Remove default border */
+    color: white;               /* White text */
+    padding: 10px 15px;        /* Padding around button */
+    border-radius: 4px;        /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    font-size: 14px;           /* Font size */
+}
+
+.add-question-button:hover {
+    background-color:#030233 ;  /* Darker blue on hover */
+}
+#qr{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  }
+
+  /* Modal content box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Download button */
+  .download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .download-btn:hover {
+    background-color: #800000;
+  }
+ #qr-con{
+    display: none;
+ }
+
+ #qr-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+ }
+ 

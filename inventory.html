@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="inventory.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Inventory Management</h1>
+
+        <section class="add_inv">
+            <h2>Add Inventory Item</h2>
+            <form id="inventory-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <input type="number" id="item-quantity" placeholder="Quantity" min="1" required>
+                <select id="item-supplier" required>
+                    <option value="" disabled selected>Select Supplier</option>
+                </select>
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+
+
+        <h2>Inventory Analysis</h2>
+        <div id="inventory-list" class="card-container">
+        </div>
+
+
+
+        <h2>Supplier List</h2>
+        <ul id="supplier-list"></ul>
+        <form id="supplier-form">
+            <button type="submit"><img src="https://www.svgrepo.com/show/510783/add-plus-square.svg" height="40px"
+                    alt=""></button>
+        </form>
+    </div>
+
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="inventory.js"></script>
+</body>
+
+</html>

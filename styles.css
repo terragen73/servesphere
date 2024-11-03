@@ -1,0 +1,259 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #000;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ddd;
+  }
+  
+  .learn-more-button {
+    background-color: #b30000;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #800000;
+  }
+  
+  /* Main content styling */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* Offset for fixed navbar */
+    background-image: url('https://img.freepik.com/premium-photo/diverse-group-individuals-sitting-around-table-engaged-lively-conversation-discussion-team-professionals-discussing-new-business-project-ai-generated_538213-17783.jpg'); /* Replace with the path to your background image */
+   
+    background-size: contain;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+
+  }
+  .button {
+    display: inline-block;
+    width: 120px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    background-color: #b30000;
+    border: 3px #b30000; /* Border color, can adjust */
+    border-radius: 30px; /* Rounded edges */
+    text-align: center;
+    line-height: 49px;
+    font-size: 18px;
+    color: white; /* Text color */
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.button:hover {
+    background-color: #800000; /* Color change on hover */
+   /* border-color: #800000;*/
+    
+}
+
+
+.button::before {
+    content: '';
+    position: 1px;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: #000; /* Color of the middle line */
+    transform: translateY(-50%);
+}
+
+
+
+  .meeting-room {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .meeting-room h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .meeting-room p {
+    font-size: 18px;
+  }
+  
+  /* Our Services Section */
+  .services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service-item {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #b30000;
+  }
+  
+  .service-item p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Meet the Team Section */
+  .team {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e9e9e9;
+  }
+  
+  .team h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #b30000;
+  }
+  
+  .footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #ddd;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }

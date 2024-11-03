@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Question Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2 class="test">Create your Survey form</h2>
+    </div>
+    <br>
+    <textarea name="" id="" cols="78" rows="5" placeholder="Enter your Form Description"></textarea>
+    <div id="question-container">
+      
+    </div>
+    <button class="submit-button add-question-button" onclick="handleSubmit()">Submit</button>
+    <button class="add-question-button" id="add" onclick="addQuestion()">ADD QUESTION</button>
+    
+
+  </div>
+  <div id="qr-con">
+
+      <h1>QR Code generated for your form</h1>
+      <button onclick="openModal()" id="qr-btn">Show QR Code</button>
+  </div>
+
+  <!-- The Modal -->
+  <div id="qrModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Download your QR Code</h2>
+      <!-- QR Code Image -->
+      <img  alt="QR Code" style="width: 200px; height: 200px;" id="qr_img">
+
+      <!-- Download Button -->
+       <p>Share this qr code to your customers so that they can scan give insights about your product</p>
+      <a   download="QRCode.png" class="download-btn" id="qr_img_down">Download QR Code</a>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

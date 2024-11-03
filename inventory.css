@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding:0;
+
+}
+
+.container {
+    max-width:100%;
+    
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#supplier-form button{
+    float: right;
+    background: none;
+}
+button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap to next line */
+    gap: 20px; /* Space between cards */
+}
+
+ 
+.details{
+    width: 100%;
+
+}
+.card h3 {
+    margin: 0 0 10px;
+}
+/* Progress card styling */
+.progress-card {
+  width: 230px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.progress-card.low-stock {
+  border: 2px solid red;
+}
+
+.progress-card h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.progress-circle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #f3f3f3;
+  stroke-width: 10;
+}
+
+.circle-fill {
+  fill: none;
+  stroke: #6a0dad;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #6a0dad;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.low-stock {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.circular-progress {
+    width: 50px; /* Diameter of the circle */
+    height: 50px;
+    position: relative;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg); /* Rotate to start from the top */
+}
+
+.circle {
+    fill: none; /* No fill for the circle */
+    stroke: #e0e0e0; /* Light grey for background circle */
+    stroke-width: 5; /* Width of the background circle */
+}
+
+.circle-fill {
+    fill: none; /* No fill for the progress circle */
+    stroke: #28a745; /* Green for available stock */
+    stroke-width: 5; /* Width of the progress circle */
+    transition: stroke-dasharray 0.4s ease; /* Smooth transition */
+}
+
+.supplier-item {
+    padding: 10px;
+    background: #e9ecef;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove-supplier {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.remove-supplier:hover {
+    background-color: #c82333;  
+}
+
+.add_inv{
+    width: 95%;
+    height: 250px;
+    padding: 10px;
+    background-color:#e3e3e3;
+    border-radius: 10px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    button {
+        font-size: 14px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards in a row on smaller screens */
+    }
+}

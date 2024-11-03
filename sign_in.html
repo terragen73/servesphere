@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServeSphere-signin-login</title>
+    <link rel="stylesheet" href="sign_in.css">
+</head>
+
+<body>
+   
+    <div id="container">
+        <div class="sign_in" id="sign_in">
+            <h1>Create an account</h1>
+            <div id="already">
+                <h5 id="already_text">Already have an account?</h5>
+                <h5 id="log_text" onclick="login_call()">Log in</h5>
+            </div>
+             
+            <input type="email" id="email" placeholder="Email">
+            <div id="pass">
+                <input type="password" id="signin_password" placeholder="Enter your password">
+                <img src="hide.jpg" alt="Show" id="togglePassword" style="cursor: pointer;">
+            </div>
+            <div id="check">
+                <input type="checkbox">
+                <h6>I agree the terms & conditions</h6>
+            </div>
+            <button id="sign_in_btn">Create account</button>
+            <div id="divider">
+                <h3>OR</h3>
+            </div>
+            <div id="opt">
+                <div class="others">
+                    <img src="search.jpg" alt="" height=" 25px" id="google-sign-in" style="cursor: pointer;">
+                    <h3>Google</h3>
+                </div>
+                <div class="others">
+                    <img src="apple.jpg" alt="" height=" 25px" style="cursor: pointer;">
+                    <h3>Apple</h3>
+                </div>
+            </div>
+        </div>
+        <div class="log_in" id="log_in">
+            <h1>Login</h1>
+            <div id="create_acc">
+
+                <h5>Don't have an account?</h5>
+                <h5 id="log_text" onclick="sign_in_call()">Create Account</h5>
+            </div>
+            <input type="email" id="login_email" class="email" placeholder="Email">
+            <div id="pass">
+                <input type="password" id="login_password" placeholder="Enter your password">
+                <img src="hide.jpg" alt="Show" id="togglePassword_log" style="cursor: pointer;">
+            </div>
+            <a href="#" id="forgot-password">Forgot Password?</a>
+            <button id="login_btn">Log in</button>
+        </div>
+        <div class="image  " id="image">
+             
+            <section></section>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="sign_in.js"></script>
+</body>
+
+</html>
