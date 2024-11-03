@@ -28,8 +28,8 @@
             <h1>Driving Success Through Smart Solution</h1>
             <h2>Simplify, Solve, Succeed</h2><br>
             <div class="buttons-container">
-                <a href="sign_in.html" class="button">Log in</a>
-                <a href="sign_in.html" class="button">Sign Up</a>
+                <a href="sign_in.html" class="button" id="btn1">Log in</a>
+                <a href="sign_in.html" class="button" id="btn2">Sign Up</a>
             </div>
 
         </div>
@@ -181,7 +181,13 @@
             <p>&copy; 2024 Corporate Firm. All rights reserved.</p>
         </div>
     </footer>
-
+    <script>
+    if(sessionStorage.getItem("username"))
+    {
+        document.getElementById("btn1").style.display="none";
+        document.getElementById("btn2").style.display="none";
+    }
+    </script>
 </body>
 
 </html>
