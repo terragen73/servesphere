@@ -142,8 +142,8 @@ function handleSubmit() {
 
 function openModal() {
    
-    document.getElementById("qr_img").setAttribute("src",`https://quickchart.io/qr?text=${formattedDate}&dark=f00&light=0ff&ecLevel=Q&format=png`)
-    document.getElementById("qr_img_down").setAttribute("href",`https://quickchart.io/qr?text=${formattedDate}&dark=f00&light=0ff&ecLevel=Q&format=png`)
+    document.getElementById("qr_img").setAttribute("src",`https://quickchart.io/qr?text=https://terragen73.github.io/servesphere/sample.html?key${formattedDate}&dark=f00&light=0ff&ecLevel=Q&format=png`)
+    document.getElementById("qr_img_down").setAttribute("href",`https://quickchart.io/qr?text=?text=https://terragen73.github.io/servesphere/sample.html?key${formattedDate}&dark=f00&light=0ff&ecLevel=Q&format=png`)
     document.getElementById("qrModal").style.display = "block";
 }
 
